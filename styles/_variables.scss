@@ -1,0 +1,15 @@
+// Typography
+$font-family: "Outfit";
+
+// colors
+$veryDarkBlueMain: #0d192c;
+$veryDarkBlueCard: #15263f;
+$veryDarkBlueLine: #2e405a;
+$cyan: #00fff8;
+$white: #ffffff;
+$softBlue: #8bacd9;
+
+@mixin hoverText {
+  color: $cyan;
+  cursor: pointer;
+}

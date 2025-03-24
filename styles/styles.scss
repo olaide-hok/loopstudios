@@ -1,0 +1,223 @@
+@use "functions" as *;
+@use "variables" as *;
+
+/* General body styling */
+body {
+  position: relative; /* Ensures the body is positioned relative to its normal flow */
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  // align-items: center; /* Centers content vertically */
+  min-height: 100vh; /* Ensures the body takes up at least the full viewport height */
+  font-family: $font-family;
+  font-style: normal;
+  line-height: normal;
+  background: $veryDarkBlueMain;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+}
+
+/* Media query for screens with a width of up to 375px */
+@media screen and (max-width: 375px) {
+  body {
+    min-height: 100%; /* Ensures the body takes up at least the full height of its parent container */
+  }
+}
+
+// Mobile First Approach
+
+.d-none {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+button {
+  border: none;
+  background: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+main {
+  &.container {
+    padding: rem(62) rem(24);
+
+    .nft {
+      border-radius: 15px;
+      background: $veryDarkBlueCard;
+      box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5rem;
+      padding: rem(24);
+
+      &__image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        height: rem(278px);
+
+        img {
+          border-radius: 8px;
+          width: 278px;
+          height: 100%;
+          position: relative;
+        }
+        &:hover {
+          cursor: pointer;
+          &::after {
+            content: "";
+            background: rgba(0, 255, 248, 0.503);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("../images/icon-view.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+        }
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(12px);
+        &--title {
+          color: $white;
+          font-family: Outfit;
+          font-size: 22px;
+          font-weight: 600;
+
+          &:hover {
+            @include hoverText;
+          }
+        }
+
+        &--desc {
+          color: $softBlue;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 26px;
+        }
+
+        &--info {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin: rem(4px) 0;
+
+          &_eth,
+          &_duration {
+            display: flex;
+            align-items: center;
+            span {
+              font-size: 15px;
+            }
+          }
+          &_eth {
+            column-gap: rem(6.48);
+            span {
+              color: $cyan;
+            }
+          }
+          &_duration {
+            column-gap: rem(7.69);
+            span {
+              color: $softBlue;
+            }
+          }
+        }
+
+        &--avatar {
+          border-top: 1px solid $veryDarkBlueLine;
+          display: flex;
+          align-items: center;
+          column-gap: 1rem;
+          padding-top: 1rem;
+          img {
+            width: 33px;
+            height: 33px;
+            border-radius: 33px;
+            border: 1px solid $white;
+          }
+
+          p {
+            color: $softBlue;
+            font-size: 15px;
+
+            span {
+              color: $white;
+              &:hover {
+                @include hoverText;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    &.container {
+      padding: 0;
+      margin: rem(152) auto;
+      width: rem(350px);
+
+      .nft {
+        padding: rem(24) rem(24) rem(32);
+        &__image {
+          height: rem(302);
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        &__content {
+          row-gap: 1rem;
+
+          &--info {
+            margin: 0.5rem 0;
+
+            &_eth,
+            &_duration {
+              span {
+                font-size: 1rem;
+              }
+            }
+          }
+
+          &--avatar {
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 1440px) {
+}
