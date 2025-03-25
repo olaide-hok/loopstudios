@@ -462,7 +462,7 @@ main.container .footer .socials-copyright .text {
   main.container .mid-section .our-creations {
     display: flex;
     flex-direction: column;
-    row-gap: 3rem;
+    row-gap: 5rem;
     position: relative;
     margin-bottom: 0;
   }
