@@ -11,6 +11,16 @@ $white: #ffffff;
 
 @mixin link {
   @include text;
+  position: relative;
+  &:hover::after {
+    content: "";
+    border-bottom: 2px solid $white;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44%;
+  }
 }
 
 @mixin text {
