@@ -226,6 +226,20 @@ main.container .mid-section .our-creations .creations .crxn .name {
   text-transform: uppercase;
   width: 7.6875rem;
 }
+main.container .mid-section .our-creations .creations .crxn:hover::after, main.container .mid-section .our-creations .creations .crxn:focus::after {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  width: 100%;
+  height: 100%;
+}
+main.container .mid-section .our-creations .creations .crxn:hover .name, main.container .mid-section .our-creations .creations .crxn:focus .name {
+  color: #000000;
+  z-index: 2;
+}
 main.container .footer {
   background-color: #000000;
   padding: 3.5rem 3.25rem;
