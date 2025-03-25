@@ -21,6 +21,7 @@
 
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/styles.css">
+    <script defer src="index.js"></script>
 
     <title>Frontend Mentor | Loopstudios landing page</title>
   </head>
@@ -37,7 +38,7 @@
             <li><a href="#">Products</a></li>
             <li><a href="#">Support</a></li>
           </ul>
-          <button class="mobile-menu" type="button">
+          <button id="open-menu" class="mobile-menu" type="button">
             <img src="./images/icon-hamburger.svg" alt="mobile menu">
           </button>
         </nav>
@@ -49,7 +50,8 @@
 
       <!-- Mobile and Tablet Navigation -->
       <nav id="mobile-nav" class="mobile_nav d-none">
-        <div>
+        <div class="logo-close">
+          <img src="./images/logo.svg" alt="Loopstudios mobile logo">
           <button id="close-menu" type="button">
             <img src="./images/icon-close.svg" alt="icon close mobile menu">
           </button>
