@@ -484,6 +484,7 @@ main {
           margin-top: rem(130);
           padding: rem(40);
           width: rem(650);
+          height: rem(278);
 
           .text {
             font-size: 72px;
@@ -497,7 +498,7 @@ main {
         position: relative;
         display: flex;
         flex-direction: column;
-        row-gap: rem(96);
+        row-gap: rem(184);
 
         .interactive-vr {
           display: flex;

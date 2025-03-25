@@ -415,6 +415,7 @@ main.container .footer .socials-copyright .text {
     margin-top: 8.125rem;
     padding: 2.5rem;
     width: 40.625rem;
+    height: 17.375rem;
   }
   main.container .hero .hero-text-wrapper .text {
     font-size: 72px;
@@ -425,7 +426,7 @@ main.container .footer .socials-copyright .text {
     position: relative;
     display: flex;
     flex-direction: column;
-    row-gap: 6rem;
+    row-gap: 11.5rem;
   }
   main.container .mid-section .interactive-vr {
     display: flex;
