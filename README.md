@@ -50,4 +50,3 @@ Users should be able to:
 
 - Website - [Habeeb Kareem](https://habeeb-dev.netlify.app)
 - Frontend Mentor - [@olaide-hok](https://www.frontendmentor.io/profile/olaide-hok)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
